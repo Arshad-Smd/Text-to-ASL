@@ -1,0 +1,255 @@
+/* src/components/CarouselWithQuiz.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.carousel .slide {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 0 3em;
+}
+
+.slide-title {
+  margin: 0;
+  margin-top: 1em;
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-title span {
+    text-align: start;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.3em;
+    margin-top: 10px;
+}
+
+.slide-title span svg {
+    /* width: 20px;
+    height: 20px; */
+    font-size: 40px;
+    padding: 6px;
+    background-color: #0080da;
+    border-radius: 30px;
+}
+
+.slide-title span p{
+    color: #0080da;
+    font-size: 20px;
+}
+
+.slide-content {
+  text-align: start;
+  font-size: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+  /* margin-top: 0.3em; */
+  width: 90%;
+}
+
+.slide-description {
+  /* Additional styling if needed */
+}
+
+.slide-gif {
+  max-width: 80%;
+  max-height: 60%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.end-slide {
+  background-color: #2c3e50;
+}
+
+/* Next Button Styling */
+.next-button {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  background-color: #0080da;
+  color: white;
+  border: 1px solid transparent;
+  border-bottom: 8px solid #3797db;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  width: 150px;
+  /* transition: background-color 0.3s ease; */
+}
+
+.next-button:hover {
+  border-bottom: 2px solid #3797db;
+}
+
+/* Back Button Styling */
+.back-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  background-color: #0080da;
+  color: white;
+  border: 1px solid transparent;
+  border-bottom: 8px solid #3797db;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.back-button:hover {
+    border-bottom: 2px solid #3797db;
+}
+
+.back-button:disabled {
+  background-color: #bdbdbd;
+  cursor: not-allowed;
+}
+
+/* Quiz Styling */
+.quiz {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.quiz p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.quiz ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.quiz li {
+  margin-bottom: 15px;
+}
+
+.quiz label {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.quiz input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.quiz button {
+  padding: 12px 24px;
+  font-size: 1.1em;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz button:hover {
+  background-color: #1565c0;
+}
+
+.quiz .congratulations {
+  color: #2e7d32;
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+
+.quiz .incorrect {
+  color: #c62828;
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+
+/* Quiz Result Styling */
+.quiz-result {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-result h2 {
+  font-size: 2em;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.learn-again-button {
+  padding: 12px 24px;
+  font-size: 1.1em;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-again-button:hover {
+  background-color: #1565c0;
+}
+
+.top-bar {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 90%;
+    height: 10px; /* Adjust height as needed */
+    background-color: #4c5358; /* Background color similar to your image */
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .top-bar-progress {
+    height: 100%;
+    width: 15%; /* Adjust width for progress */
+    background-color: #1565c0; /* Bright green for the progress */
+    border-radius: 10px;
+    transition: width 0.3s ease;
+  }
+  
