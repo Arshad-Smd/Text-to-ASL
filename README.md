@@ -17,3 +17,14 @@ To solve the problem of communication barriers between hearing and non-hearing i
 - **Animation Playback**: Once mapped, the avatar plays the animations in sync with the utterances, providing a real-time ASL translation of the conversation.
 
 This seamless integration allows for more inclusive communication by offering live ASL interpretation in video conferencing settings.
+
+## Tech Stack
+
+This project utilizes a diverse set of technologies to deliver real-time American Sign Language (ASL) translation within a video conferencing platform:
+
+- **Unity & Blender**: Unity is used for 3D rendering and animation of the avatar, with animations designed in Blender. The final application is exported using Unity WebGL for browser-based execution.
+- **WebGL Integration**: The Unity WebGL build is integrated into the frontend, which is developed using React, enabling seamless playback of animations.
+- **Sentence Transformers**: Sentence transformers are employed to intelligently map spoken or written words to the correct ASL animation triggers.
+- **Backend Communication**: After the appropriate trigger is determined using the sentence transformers, it is sent to Unity WebGL, which controls the avatar animation and ensures it plays correctly in the frontend.
+
+This tech stack provides the framework for smooth, real-time ASL translations, making video conferencing more accessible.
