@@ -28,3 +28,17 @@ This project utilizes a diverse set of technologies to deliver real-time America
 - **Backend Communication**: After the appropriate trigger is determined using the sentence transformers, it is sent to Unity WebGL, which controls the avatar animation and ensures it plays correctly in the frontend.
 
 This tech stack provides the framework for smooth, real-time ASL translations, making video conferencing more accessible.
+
+## Intel Optimizations
+
+This project utilizes the **Intel Extension for PyTorch** to optimize model performance and reduce latency in playing ASL animations. The extension enhances PyTorch’s performance on Intel hardware, particularly by optimizing the inference speed of the Sentence Transformer model used for mapping spoken words to ASL animation triggers. Here's how it contributes to improving the system:
+
+- **Intel Extension for PyTorch**: This extension is specifically designed to optimize PyTorch models for Intel architectures, providing substantial performance improvements without requiring any changes to the original model code. By using just-in-time (JIT) compilation, it ensures that the PyTorch model can run efficiently on Intel CPUs.
+
+- **Inference Optimization**: The extension accelerates the inference process of the Sentence Transformer model. It leverages optimizations like **vectorization** and **multi-threading** to make the most of Intel’s CPU architecture, allowing the model to process spoken words faster and map them to corresponding animation triggers in less time.
+
+- **Reduced Latency**: By utilizing these optimizations, the extension reduces the latency between recognizing speech and playing the ASL animations. The faster the model can map words to triggers, the quicker the avatar responds, ensuring real-time feedback in the video conferencing environment.
+
+- **Ease of Integration**: The Intel Extension for PyTorch integrates seamlessly into the project, requiring minimal changes to the existing PyTorch codebase. This makes it an ideal solution for improving performance without overhauling the entire architecture.
+
+In summary, by using the Intel Extension for PyTorch, the project experiences faster model inference, reduced latency in animation playback, and overall smoother real-time ASL translations in video conferencing software.
