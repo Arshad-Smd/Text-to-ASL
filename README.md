@@ -44,6 +44,9 @@ This project utilizes the **Intel Extension for PyTorch** to optimize model perf
 
 In summary, by using the Intel Extension for PyTorch, the project experiences faster model inference, reduced latency in animation playback, and overall smoother real-time ASL translations in video conferencing software. 🎉
 
+## prototype video :
+[YOUTUBE VIDEO](https://youtu.be/AMFVH84sMJs)
+
 ## Project Screenshots 📸
 
 ![Screenshot 2024-10-19 113053](https://github.com/user-attachments/assets/db41e1b6-08aa-47e4-a000-c0f0bd27dfdf)
